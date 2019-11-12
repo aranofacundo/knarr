@@ -3,9 +3,9 @@
   "silent": false,
   "files": {
     "Dockerfile": [
-      "version=\"([^]*)\"",
+      "version=\"([\\d.]*)\"",
       "version=\"[version]\"",
-      ""
+      "i"
     ]
   },
   "version": {
@@ -28,7 +28,7 @@
   },
   "commit": {
     "enabled": true,
-    "message": "chore: bumped version to [version]"
+    "message": "chore: aumenta version a [version]"
   },
   "tag": {
     "enabled": true,

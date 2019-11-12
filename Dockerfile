@@ -1,7 +1,7 @@
 FROM debian:buster
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
-    version="0.1.0"
+    version="0.1.1"
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
