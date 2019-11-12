@@ -1,0 +1,4 @@
+Knarr
+====
+
+Una pequeña imagen basada Debian con S6, Python 3.7, Poetry y Nginx.
