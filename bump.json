@@ -1,0 +1,44 @@
+{
+  "force": false,
+  "silent": false,
+  "files": {
+    "Dockerfile": [
+      "version=\"([^]*)\"",
+      "version=\"[version]\"",
+      ""
+    ]
+  },
+  "version": {
+    "enabled": true,
+    "initial": "0.1.0",
+    "increments": [
+      "major",
+      "minor",
+      "patch"
+    ]
+  },
+  "changelog": {
+    "enabled": true,
+    "create": false,
+    "open": true,
+    "file": "CHANGELOG.md",
+    "version": "### Version [version]",
+    "commit": "- [message]",
+    "separator": "\n"
+  },
+  "commit": {
+    "enabled": true,
+    "message": "chore: bumped version to [version]"
+  },
+  "tag": {
+    "enabled": true,
+    "name": "[version]"
+  },
+  "release": {
+    "enabled": false
+  },
+  "scripts": {
+    "prebump": "",
+    "postbump": ""
+  }
+}

@@ -1,0 +1,16 @@
+# Node stuff:
+node_modules/
+
+# Python stuff:
+__pycache__/
+.venv/
+/public/
+
+# VSCode stuff:
+.vscode/
+
+# IDEA stuff:
+.idea/
+
+# git stuff:
+.git/
