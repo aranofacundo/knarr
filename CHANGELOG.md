@@ -1,3 +1,6 @@
+### Version 0.1.3
+- chore: cambio en la instalacion de poetry
+
 ### Version 0.1.2
 - feat: añade servicio nginx
 
