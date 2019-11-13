@@ -21,13 +21,11 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./services/nginx /etc/services.d/myapp/run
+COPY ./services/nginx /etc/services.d/nginx/run
 
-RUN groupadd -r knarr && useradd --no-log-init -r -g knarr knarr
-USER knarr
+RUN pip3 install pipx && pipx ensurepath && pipx install poetry
+ENV PATH="/root/.local/bin:${PATH}"
 
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
-ENV PATH="/home/knarr/.local/bin:/home/knarr/.poetry/bin:${PATH}"
-
+USER 1000
 EXPOSE 80
 ENTRYPOINT ["/init"]
