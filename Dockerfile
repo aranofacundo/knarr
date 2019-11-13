@@ -1,7 +1,7 @@
 FROM python:3.7
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
-    version="0.1.3"
+    version="0.1.4"
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1

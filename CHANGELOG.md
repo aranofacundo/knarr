@@ -1,3 +1,6 @@
+### Version 0.1.4
+- fix: cambia la imagen base de python:3.7
+
 ### Version 0.1.3
 - chore: cambio en la instalacion de poetry
 
