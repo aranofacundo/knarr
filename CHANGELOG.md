@@ -1,3 +1,6 @@
+### Version 0.1.5
+- fix: cambios en el servicio de nginx
+
 ### Version 0.1.4
 - fix: cambia la imagen base de python:3.7
 
