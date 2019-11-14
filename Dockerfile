@@ -21,7 +21,7 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./services/nginx /etc/services.d/nginx/run
+COPY ./services/nginx /etc/services.d/99-nginx/run
 
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
 
