@@ -5,7 +5,7 @@ LABEL maintainer="aranofacundo@berserker.com.ar" \
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-ENV PATH="/root/.poetry/bin::${PATH}"
+ENV PATH="/root/.local/bin:/usr/local/bin:${PATH}"
 
 ARG S6_OVERLAY_ARCH=amd64
 ARG S6_OVERLAY_VERSION=1.22.1.0
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
 
 COPY ./services/nginx /etc/services.d/99-nginx/run
 
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
+RUN pip3 install pipx && pipx ensurepath && pipx install poetry
 
 EXPOSE 80
 ENTRYPOINT ["/init"]
