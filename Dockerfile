@@ -15,13 +15,13 @@ ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/downlo
 ADD ${S6_OVERLAY_URL} /tmp/
 RUN tar xzf /tmp/${S6_OVERLAY_FILE} -C /
 
-RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
+RUN apt-get update \
     && apt-get install --no-install-recommends -qy nginx curl default-libmysqlclient-dev gettext \
     && apt-get autoremove --purge -qy \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./services/nginx /etc/services.d/99-nginx/run
+COPY ./services/99-nginx /etc/services.d/99-nginx/run
 
 RUN pip3 install pipx && pipx ensurepath && pipx install poetry
 
