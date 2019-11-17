@@ -1,3 +1,6 @@
+### Version 0.1.7
+- fix: remueve "apt upgrade" de Dockerfile
+
 ### Version 0.1.6
 - fix: cambio variable PATH
 
