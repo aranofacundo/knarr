@@ -1,3 +1,6 @@
+### Version 0.2.0
+- feat: cambia imagen python por debian
+
 ### Version 0.1.8
 
 ### Version 0.1.7
