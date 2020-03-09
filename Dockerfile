@@ -19,7 +19,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./services/99-nginx /etc/services.d/99-nginx/run
+COPY rootfs /
 
 EXPOSE 80
 ENTRYPOINT ["/init"]

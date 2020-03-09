@@ -1,0 +1,36 @@
+# Node stuff:
+node_modules/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info
+
+
+# Django stuff:
+*.log
+.static_storage/
+.media/
+/public
+db.sqlite3
+
+# Pipenv files
+.venv/
+.env
+
+# VSCode
+/.vscode/.ropeproject/
+
+# Laravel Mix
+mix-manifest.json
+
+# PyCharm
+.idea/
+
+# Others
+.directory
+
+/.docker/data
+celerybeat-schedule
+*.ipynb*
