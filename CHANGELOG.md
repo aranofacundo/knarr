@@ -1,3 +1,6 @@
+### Version 0.2.1
+- chore: cambio de repo y formato a rootfs
+
 ### Version 0.2.0
 - feat: cambia imagen python por debian
 
