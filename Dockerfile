@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM ubuntu:focal
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
     version="0.2.1"
@@ -10,14 +10,15 @@ ARG S6_OVERLAY_VERSION=1.22.1.0
 ARG S6_OVERLAY_FILE=s6-overlay-${S6_OVERLAY_ARCH}.tar.gz
 ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/${S6_OVERLAY_FILE}
 
-ADD ${S6_OVERLAY_URL} /tmp/
-RUN tar xzf /tmp/${S6_OVERLAY_FILE} -C /
-
-RUN apt-get update \
-    && apt-get install --no-install-recommends -qy nginx curl default-libmysqlclient-dev cron \
+RUN apt-get update && apt-get upgrade -qy \
+    && apt-get install --no-install-recommends -qy nginx curl bash cron ca-certificates \
     && apt-get autoremove --purge -qy \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && apt-get clean
+
+RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
+    && tar xzf /tmp/${S6_OVERLAY_FILE} -C /
+
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY rootfs /
 

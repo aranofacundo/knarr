@@ -1,4 +1,4 @@
 Knarr
 ====
 
-Una pequeña imagen basada Debian con S6, Python 3.7, Poetry y Nginx.
+Una pequeña imagen basada Ubuntu LTS con S6, cron, curl y nginx.
