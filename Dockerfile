@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:latest
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
     version="1.0.0"
