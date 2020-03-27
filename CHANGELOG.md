@@ -1,3 +1,6 @@
+### Version 1.0.0
+- feat: cambio de debian a ubuntu
+
 ### Version 0.2.1
 - chore: cambio de repo y formato a rootfs
 
