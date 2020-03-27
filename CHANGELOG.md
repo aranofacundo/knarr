@@ -1,3 +1,6 @@
+### Version 1.0.1
+- fix: cambia de focal a latest
+
 ### Version 1.0.0
 - feat: cambio de debian a ubuntu
 

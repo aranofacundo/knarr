@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
-    version="1.0.0"
+    version="1.0.1"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
