@@ -13,12 +13,12 @@ ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/downlo
 RUN apt-get update && apt-get upgrade -qy \
     && apt-get install --no-install-recommends -qy nginx curl bash cron ca-certificates \
     && apt-get autoremove --purge -qy \
-    && apt-get clean
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
-    && tar xzf /tmp/${S6_OVERLAY_FILE} -C /
-
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && tar xzf /tmp/${S6_OVERLAY_FILE} -C / \
+    && rm -rf /tmp/*
 
 COPY rootfs /
 
