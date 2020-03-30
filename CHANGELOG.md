@@ -1,3 +1,6 @@
+### Version 1.0.3
+- fix: mejora eliminacion de archivos temporales
+
 ### Version 1.0.2
 - feat: agrega configuracion de nginx
 
