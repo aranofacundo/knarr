@@ -1,3 +1,6 @@
+### Version 1.0.2
+- feat: agrega configuracion de nginx
+
 ### Version 1.0.1
 - fix: cambia de focal a latest
 
