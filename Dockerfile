@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
     version="1.0.3"
@@ -6,7 +6,7 @@ LABEL maintainer="aranofacundo@berserker.com.ar" \
 ENV DEBIAN_FRONTEND=noninteractive
 
 ARG S6_OVERLAY_ARCH=amd64
-ARG S6_OVERLAY_VERSION=1.22.1.0
+ARG S6_OVERLAY_VERSION=2.0.0.1
 ARG S6_OVERLAY_FILE=s6-overlay-${S6_OVERLAY_ARCH}.tar.gz
 ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/${S6_OVERLAY_FILE}
 
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get upgrade -qy \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
-    && tar xzf /tmp/${S6_OVERLAY_FILE} -C / \
+    && tar xzf /tmp/${S6_OVERLAY_FILE} -C / --exclude='./bin' && tar xzf ${S6_OVERLAY_FILE} -C /usr ./bin \
     && rm -rf /tmp/*
 
 COPY rootfs /
