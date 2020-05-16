@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
-    version="1.1.0"
+    version="1.1.1"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
