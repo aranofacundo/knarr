@@ -1,3 +1,6 @@
+### Version 1.1.0
+- feat: actualiza a ubuntu focal y s6-overlay 2
+
 ### Version 1.0.3
 - fix: mejora eliminacion de archivos temporales
 
