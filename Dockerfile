@@ -17,7 +17,8 @@ RUN apt-get update && apt-get upgrade -qy \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
-    && tar xzf /tmp/${S6_OVERLAY_FILE} -C / --exclude='./bin' && tar xzf ${S6_OVERLAY_FILE} -C /usr ./bin \
+    && tar xzf /tmp/${S6_OVERLAY_FILE} -C / --exclude="./bin" \
+    && tar xzf /tmp/${S6_OVERLAY_FILE} -C /usr ./bin \
     && rm -rf /tmp/*
 
 COPY rootfs /
