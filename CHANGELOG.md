@@ -1,3 +1,5 @@
+### Version 1.1.2
+
 ### Version 1.1.1
 - fix: corrige ubicacion de s6
 
