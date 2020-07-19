@@ -1,3 +1,6 @@
+### Version 1.2.0
+- feat: actualiza configuracion de gitlab-ci
+
 ### Version 1.1.2
 
 ### Version 1.1.1
