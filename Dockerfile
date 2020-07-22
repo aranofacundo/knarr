@@ -15,6 +15,8 @@ ENV PGID="1000"
 
 COPY rootfs /
 
+RUN chmod +x /usr/bin/knarr_install /usr/bin/knarr_upgrade
+
 RUN knarr_upgrade \
     && knarr_install nginx curl bash cron ca-certificates tzdata nano
 
