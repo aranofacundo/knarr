@@ -10,8 +10,9 @@ ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/downlo
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV PUID="1000"
-ENV PGID="1000"
+ENV PUID=1000
+ENV PGID=1000
+ENV CRON=0
 
 COPY rootfs /
 
@@ -28,7 +29,6 @@ RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
 RUN groupadd -g ${PGID} knarr && \
     useradd -u ${PUID} -d /dev/null -s /sbin/nologin -g knarr knarr
 
-VOLUME [ "/tmp" ]
-
+VOLUME ["/tmp"]
 EXPOSE 80
 ENTRYPOINT ["/init"]
