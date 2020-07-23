@@ -28,5 +28,7 @@ RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
 RUN groupadd -g ${PGID} knarr && \
     useradd -u ${PUID} -d /dev/null -s /sbin/nologin -g knarr knarr
 
+VOLUME [ "/tmp" ]
+
 EXPOSE 80
-ENTRYPOINT ["/init", "/tmp"]
+ENTRYPOINT ["/init"]
