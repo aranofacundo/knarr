@@ -1,0 +1,8 @@
+#!/usr/bin/execlineb -P
+
+with-contenv
+
+importas -D 0 enabled CRON
+if -n {test ${enabled} -eq "0"}
+
+/usr/sbin/cron -f -l 0
