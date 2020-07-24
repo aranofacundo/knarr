@@ -4,7 +4,7 @@
 importas -D 0 cron CRON
 
 # Verfica si $CRON esta deshabilitado y termina el script
-if { test $cron -eq "0" }
+if { s6-test $cron -eq 0 }
 
 # Ejecuta cron
 with-contenv
