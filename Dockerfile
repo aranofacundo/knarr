@@ -14,7 +14,7 @@ ENV PUID=1000
 ENV PGID=1000
 ENV CRON=0
 
-COPY rootfs /
+COPY rootfs/usr/bin /usr/bin
 
 RUN chmod +x /usr/bin/knarr_install /usr/bin/knarr_upgrade
 
@@ -28,6 +28,8 @@ RUN curl -L ${S6_OVERLAY_URL} -o /tmp/${S6_OVERLAY_FILE} \
 
 RUN groupadd -g ${PGID} knarr && \
     useradd -u ${PUID} -d /dev/null -s /sbin/nologin -g knarr knarr
+
+COPY rootfs /
 
 VOLUME ["/tmp"]
 EXPOSE 80
