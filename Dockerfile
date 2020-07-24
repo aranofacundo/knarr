@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 LABEL maintainer="aranofacundo@berserker.com.ar" \
-    version="1.2.0"
+    version="1.2.1"
 
 ARG S6_OVERLAY_ARCH=amd64
 ARG S6_OVERLAY_VERSION=2.0.0.1

@@ -1,3 +1,14 @@
+### Version 1.2.1
+- chore: cambios menores en .*ignore
+- feat: agrega scripts de instalacion
+- fix: cambios menores
+- chore: cambios menores
+- fix: corrige error /tmp en ENTRYPOINT
+- chore: cambios menores
+- feat: agrega servicio de cron
+- fix: cambios menores
+- fix: remueve with-contenv en nginx
+
 ### Version 1.2.0
 - feat: actualiza configuracion de gitlab-ci
 
