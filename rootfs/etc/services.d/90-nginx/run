@@ -1,5 +1,4 @@
 #!/usr/bin/execlineb -P
 
 with-contenv
-
 nginx -g "daemon off;"

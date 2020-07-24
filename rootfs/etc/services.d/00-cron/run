@@ -1,8 +1,11 @@
 #!/usr/bin/execlineb -P
 
+# Importa $CRON, sino devuelve 0
+importas -D 0 cron CRON
+
+# Verfica si $CRON esta deshabilitado y termina el script
+if { test $cron -eq "0" }
+
+# Ejecuta cron
 with-contenv
-
-importas -D 0 enabled CRON
-if -n {test ${enabled} -eq "0"}
-
 /usr/sbin/cron -f -l 0
