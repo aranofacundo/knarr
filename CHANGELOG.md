@@ -1,3 +1,6 @@
+### Version 1.2.3
+- fix: duplica correccion de permisos en /usr/bin
+
 ### Version 1.2.2
 - fix: cambios menores
 - fix: corrige copia de archivos antes de tiempo
