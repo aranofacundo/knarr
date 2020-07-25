@@ -1,3 +1,7 @@
+### Version 1.2.2
+- fix: cambios menores
+- fix: corrige copia de archivos antes de tiempo
+
 ### Version 1.2.1
 - chore: cambios menores en .*ignore
 - feat: agrega scripts de instalacion
