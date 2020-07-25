@@ -15,8 +15,7 @@ ENV PGID=1000
 ENV CRON=0
 
 COPY rootfs/usr/bin /usr/bin
-
-RUN chmod +x /usr/bin/knarr_install /usr/bin/knarr_upgrade
+RUN chmod 755 /usr/bin/knarr_install /usr/bin/knarr_upgrade
 
 RUN knarr_upgrade \
     && knarr_install nginx curl bash cron ca-certificates tzdata nano
@@ -30,6 +29,8 @@ RUN groupadd -g ${PGID} knarr && \
     useradd -u ${PUID} -d /dev/null -s /sbin/nologin -g knarr knarr
 
 COPY rootfs /
+RUN chmod 755 /usr/bin/knarr_install /usr/bin/knarr_upgrade
+
 
 VOLUME ["/tmp"]
 EXPOSE 80
