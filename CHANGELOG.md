@@ -1,3 +1,5 @@
+### Version 1.2.4
+
 ### Version 1.2.3
 - fix: duplica correccion de permisos en /usr/bin
 
