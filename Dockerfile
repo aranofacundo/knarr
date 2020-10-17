@@ -4,7 +4,7 @@ LABEL maintainer="aranofacundo@berserker.com.ar" \
     version="1.2.4"
 
 ARG S6_OVERLAY_ARCH=amd64
-ARG S6_OVERLAY_VERSION=2.0.0.1
+ARG S6_OVERLAY_VERSION=2.1.0.0
 ARG S6_OVERLAY_FILE=s6-overlay-${S6_OVERLAY_ARCH}.tar.gz
 ARG S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/${S6_OVERLAY_FILE}
 
