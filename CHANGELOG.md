@@ -1,3 +1,6 @@
+### Version 1.3.0
+- feat: actualiza a s6-overlay 2.1.0.0
+
 ### Version 1.2.4
 
 ### Version 1.2.3
